@@ -1,0 +1,58 @@
+@keyframes rw-spinner-animation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rw-spinner {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    overflow: visible;
+    vertical-align: middle;
+
+    transition: color 500ms linear;
+}
+
+.rw-spinner-spinning {
+    display: inline-flex;
+}
+
+.rw-spinner-primary {
+    color: #1890ff;
+}
+.rw-spinner-success {
+    color: #52c41a;
+}
+.rw-spinner-warning {
+    color: #faad14;
+}
+.rw-spinner-danger {
+    color: #ff4d4f;
+}
+
+.rw-spinner svg {
+    display: block;
+}
+
+.rw-spinner path {
+    fill-opacity: 0;
+}
+
+.rw-spinner-head {
+    transform-origin: center;
+    transition: stroke-dashoffset 200ms cubic-bezier(0.4, 1, 0.75, 0.9);
+    stroke-linecap: round;
+}
+
+.rw-spinner-track {
+    stroke: rgba(92, 112, 128, 0.2);
+}
+
+.rw-spinner .rw-spinner-animation {
+    animation: rw-spinner-animation 500ms linear infinite;
+}
